@@ -5,7 +5,7 @@ const Accessories = () => {
         <div>
             Accessories for your boom-sticks
         </div>
-    )
-}
+    );
+};
 
 export default Accessories;
