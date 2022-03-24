@@ -1,24 +1,26 @@
 import React, { useState } from "react";
-import { faq } from "./FaQ";
+// import { faq } from "./FaQ";
 
 const Accordion = ({ faq }) => {
-    const [activeIndex, setActiveIndex] = useState(null);
+    const [activeQuestion, setActiveQuestion] = useState(null);
 
-    const onQuestionClick = (index) => {
-        setActiveIndex(index);
+    const onQuestionClick = (question) => {
+        return setActiveQuestion(question);
     };
 
-    const RenderedFaq = faq.map((faq, index) => {
+    const RenderedFaq = faq.map((faq, question) => {
+        const active = question === activeQuestion ? 'active' : '';
+
         return (
             <React.Fragment key={faq.question}>
                 <div 
-                    className="title active"
-                    onClick={() => onQuestionClick(index)}  
+                    className={`title ${active}`}
+                    onClick={() => onQuestionClick(question)}  
                 >
                     <i className="dropdown icon"></i>
                     {faq.question}
                 </div>
-                <div className="content active">
+                <div className={`content ${active}`}>
                     <p>{faq.answer}</p>
                 </div>
             </React.Fragment>
@@ -26,9 +28,8 @@ const Accordion = ({ faq }) => {
     });
 
     return (
-        <div className="ui styled accordion">
+        <div className="ui styled fluid accordion">
             {RenderedFaq}
-            <h1>{activeIndex}</h1>
         </div>
     );
 };

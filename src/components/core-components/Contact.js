@@ -1,9 +1,12 @@
 import React from "react";
+import MapsContainer from '../../apis/GoogleMaps';
 
 const Contact = () => {
     return (
         <div>
-            Contact us
+            <div>
+                <MapsContainer />
+            </div>
         </div>
     );
 };

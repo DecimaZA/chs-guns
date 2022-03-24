@@ -1,7 +1,9 @@
 import React from "react";
 
+import Header from "./Header";
+
 import Accessories from "./core-components/Accessories";
-import Accordion from "./core-components/Accordion";
+// import Accordion from "./core-components/Accordion";
 import Contact from "./core-components/Contact";
 import Home from "./core-components/Home";
 import Products from "./core-components/Products";
@@ -13,6 +15,7 @@ import Route from "./Route";
 const App = () => {
     return (
         <div>
+            <Header />
             <Route path="/">
                 <Home />
             </Route>
