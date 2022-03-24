@@ -11,4 +11,6 @@ const Contact = () => {
     );
 };
 
+// A comment
+
 export default Contact;
