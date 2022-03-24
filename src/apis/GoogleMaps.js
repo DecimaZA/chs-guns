@@ -1,7 +1,7 @@
 import React from "react";
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-const key = 'IGNORED';
+const key = 'IGNORED ATTEMPT 3';
 // AIzaSyCJ_3kwKCY8B9XHk3qVDb7dpg0Tz7KY8Gw
 
 const mapStyles = {
