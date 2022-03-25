@@ -34,8 +34,15 @@ export const faq = [
 
 const FaQ = () => {
     return (
-        <div className="word-wrap: break-word">
-            <Accordion faq={faq} />
+        <div>
+            <div>
+                <h1>Frequently Asked Questions</h1>
+                <h2>...and the answers we frequently give</h2>
+            <br />
+            </div>
+            <div className="word-wrap: break-word">
+                <Accordion faq={faq} />
+            </div>
         </div>
     );
 };
