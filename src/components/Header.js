@@ -1,28 +1,38 @@
 import React from "react";
 import Link from "./Link";
+//Material-UI imports
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "material-ui/Toolbar";
+import VerifiedUserRoundedIcon from '@material-ui/icons/VerifiedUserRounded';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { Typography, Button } from "@material-ui/core";
 
 const Header = () => {
     return (
-        <div className="ui secondary pointing menu">
-            <Link href='/' className="item">
-                Home
-            </Link>
-            <Link href='/products' className="item">
-                Products
-            </Link>
-            <Link href='/accessories' className="item">
-                Accessories
-            </Link>
-            <Link href='/services' className="item">
-                services
-            </Link>
-            <Link href='/faq' className="item">
-                FAQ
-            </Link>
-            <Link href='/contact' className="item">
-                Contact Us
-            </Link>
-        </div>
+        <MuiThemeProvider>
+            <AppBar position="static" color="primary" >
+                <Toolbar style={{backgroundColor: "black"}}>
+                    <Link href='/'>
+                        <VerifiedUserRoundedIcon edge="start" style={{ fontSize: 50, margin: 3 }} />
+                    </Link>
+                        <Link href='/'>
+                            Home
+                        </Link>
+                        <Link href='/products'>
+                            Products
+                        </Link>
+                        <Link href='/services'>
+                            Services
+                        </Link>
+                        <Link href='/faq'>
+                            FAQ
+                        </Link>
+                        <Link href='/contact'>
+                            Contact Us
+                        </Link>
+                </Toolbar> 
+            </AppBar>
+        </MuiThemeProvider>        
     );
 };
 

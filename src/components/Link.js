@@ -1,6 +1,7 @@
 import React from "react";
+import { Button } from "@material-ui/core";
 
-const Link = ({ className, href, children }) => {
+const Link = ({ href, children }) => {
     const onHeaderClick = (event) => {
         event.preventDefault();
         window.history.pushState({}, '', href);
@@ -9,14 +10,17 @@ const Link = ({ className, href, children }) => {
         window.dispatchEvent(navEvent);
     };
     
-    return <a 
-        onClick={onHeaderClick} 
-        className={className} 
-        href={href} 
-        children={children}
-    >
+    return (
+        <Button 
+            style={{ fontSize: 40, color: "#ffffff" }}
+            onClick={onHeaderClick} 
+            
+            href={href} 
+            children={children}
+        >
 
-    </a>
+        </Button>
+    )
 };
 
 export default Link;
