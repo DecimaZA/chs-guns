@@ -1,5 +1,7 @@
 import React from "react";
 import { Button } from "@material-ui/core";
+import { ButtonGroup, Typography } from "@mui/material";
+import { grey } from "@material-ui/core/colors";
 
 const Link = ({ href, children }) => {
     const onHeaderClick = (event) => {
@@ -9,17 +11,23 @@ const Link = ({ href, children }) => {
         const navEvent = new PopStateEvent('popstate');
         window.dispatchEvent(navEvent);
     };
-    
-    return (
-        <Button 
-            style={{ fontSize: 40, color: "#ffffff" }}
-            onClick={onHeaderClick} 
-            
-            href={href} 
-            children={children}
-        >
 
-        </Button>
+    return (
+            <Button
+                onClick={onHeaderClick}
+                href={href} 
+                variant="contained"
+                size="large"
+                disableElevation
+            >
+                <Typography 
+                    color="#ffffff"
+                    fontSize="40"
+                    
+                >
+                    {children}
+                </Typography>
+            </Button>
     )
 };
 

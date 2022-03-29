@@ -13,10 +13,17 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
 import Route from "./Route";
+import { Box } from "@material-ui/core";
 
 const App = () => {
     return (       
-        // <Container maxWidth='lg'>
+        <Box 
+        sx={{width: 1920,
+            height: 1080,
+            border: "10px",
+            backgroundColor: '#7a7a7a',
+            }}
+        >
             <div>
                 <Header />
                 <Route path="/">
@@ -38,7 +45,7 @@ const App = () => {
                     <FaQ />
                 </Route>
             </div>
-        // </Container>
+        </Box>
     );
 }
 
