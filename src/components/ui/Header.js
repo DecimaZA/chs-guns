@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "../Link";
 import theme from './Themes';
 import SearchBar from "./SearchBar";
-import { useState } from "react";
-import GroupedHeaderButtons from "../core-components/GroupedHeaderButtons";
 //MUI imports
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { ThemeProvider } from '@mui/material/styles';
@@ -13,7 +11,7 @@ import { AppBar, Toolbar, Typography, Button, ButtonGroup, IconButton, Menu, Men
 const Header = () => {   
     const pages = ["Home", "Producs", "Accessories", "Services", "FAQ", "Contact us"];
     const [anchorElNav, setAnchorElNav] = useState(null);
-
+    
     const handleOpenNavMenu = (event) => {
         return setAnchorElNav(event.currentTarget);
       };
@@ -67,8 +65,8 @@ const Header = () => {
                                     }}
                                 >
                                     {pages.map((page) => (
-                                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center" fontSize="1rem" color="secondary" >{page}</Typography>
+                                        <MenuItem key={page}  onClick={handleCloseNavMenu}>
+                                            <Typography textAlign="center" fontSize="1rem" color="primary" >{page}</Typography>
                                         </MenuItem>
                                     ))}
                                     <SearchBar />

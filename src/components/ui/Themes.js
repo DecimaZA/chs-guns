@@ -1,22 +1,22 @@
 import { createTheme } from '@mui/material/styles';
 
 const chsBlack = "#000000";
-const chsGrey = "#757575";
+const chsGray = "#757575";
 const chsWhite = "#ffffff";
-const chsLightGrey = "#cccccc";
+const chsLightGray = "#cccccc";
 
 const theme = createTheme({
     palette: {
         common: {
             chsBlack,
-            chsGrey,
-            chsLightGrey
+            chsGray,
+            chsLightGray
         },
         primary: {
             main: chsBlack,
         },    
         secondary: {
-            main: chsGrey
+            main: chsGray
         }
     },
     typography: {
@@ -27,8 +27,20 @@ const theme = createTheme({
         secondary: {
             fontSize: "1rem",
             color: chsWhite
-        }
-    }
+        },
+        tab: {
+            textTransform: "none",
+            fontSize: "1rem"
+        },
+    // button: {
+    //     primary: {
+    //         variant: "contained",
+    //         color: chsGrey
+
+    //     }
+    // }
+    },
+
 });
 
 export default theme;

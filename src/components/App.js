@@ -16,7 +16,7 @@ const App = () => {
             sx={{width: 1920,
                 height: 1080,
                 border: "10px",
-                backgroundColor: '#7a7a7a',
+                backgroundColor: "gray",
             }}
         >
             <div>

@@ -1,8 +1,8 @@
 import React from "react";
 //MUI imports
-import { Typography } from "@mui/material";
-import Box from "@mui/material/Box";
-import Container from '@mui/material/Container';
+// import { Typography } from "@mui/material";
+// import Box from "@mui/material/Box";
+// import Container from '@mui/material/Container';
 
 const Home = () => {
     return (
