@@ -15,14 +15,10 @@ const Link = ({ href, children }) => {
             <Button
                 onClick={onHeaderClick}
                 href={href} 
-                variant="contained"
-                size="large"
-                disableElevation
             >
                 <Typography 
                     color="#ffffff"
-                    fontSize="1rem"
-                    
+                    fontSize="1rem" 
                 >
                     {children}
                 </Typography>
