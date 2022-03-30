@@ -1,6 +1,8 @@
-import { Box, Container } from "@material-ui/core";
 import React from "react";
 import MapsContainer from '../../apis/GoogleMaps';
+//MUI imports
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
 const Contact = () => {
     return (

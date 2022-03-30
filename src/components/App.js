@@ -1,27 +1,22 @@
 import React from "react";
-import Header from "./Header";
-
+import Header from "./ui/Header";
+import Route from "./Route";
 import Accessories from "./core-components/Accessories";
 import Contact from "./core-components/Contact";
 import Home from "./core-components/Home";
 import Products from "./core-components/Products";
 import Services from "./core-components/Services";
 import FaQ from "./core-components/FaQ";
-
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-
-import Route from "./Route";
-import { Box } from "@material-ui/core";
+//MUI imports
+import Box from "@mui/material/Box";
 
 const App = () => {
     return (       
         <Box 
-        sx={{width: 1920,
-            height: 1080,
-            border: "10px",
-            backgroundColor: '#7a7a7a',
+            sx={{width: 1920,
+                height: 1080,
+                border: "10px",
+                backgroundColor: '#7a7a7a',
             }}
         >
             <div>

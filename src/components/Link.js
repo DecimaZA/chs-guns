@@ -1,7 +1,6 @@
 import React from "react";
-import { Button } from "@material-ui/core";
+import Button from '@mui/material/Button';
 import { ButtonGroup, Typography } from "@mui/material";
-import { grey } from "@material-ui/core/colors";
 
 const Link = ({ href, children }) => {
     const onHeaderClick = (event) => {
@@ -22,7 +21,7 @@ const Link = ({ href, children }) => {
             >
                 <Typography 
                     color="#ffffff"
-                    fontSize="40"
+                    fontSize="1rem"
                     
                 >
                     {children}
