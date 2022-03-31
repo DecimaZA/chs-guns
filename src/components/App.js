@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "./ui/Header";
-//import Link from "./Link";
-import { Outlet, Link } from "react-router-dom";
-
+import Route from "./Route";
 import Accessories from "./core-components/Accessories";
 import Contact from "./core-components/Contact";
 import Home from "./core-components/Home";
@@ -23,26 +21,25 @@ const App = () => {
         >
             <div>
                 <Header />
-                <Link to="/">
+                <Route path="/">
                     <Home />
-                </Link>
-                <Link to="/products">
+                </Route>
+                <Route path="/products">
                     <Products />
-                </Link>
-                <Link to="/accessories">
+                </Route>
+                <Route path="/accessories">
                     <Accessories />
-                </Link>
-                <Link to="/services">
+                </Route>
+                <Route path="/services">
                     <Services />
-                </Link>
-                <Link to="/contact">
+                </Route>
+                <Route path="/contact">
                     <Contact />
-                </Link>
-                <Link to="/faq">
+                </Route>
+                <Route path="/faq">
                     <FaQ />
-                </Link>
+                </Route>
             </div>
-            <Outlet />
         </Box>
     );
 }
