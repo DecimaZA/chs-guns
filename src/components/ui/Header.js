@@ -18,10 +18,10 @@ const Header = () => {
     const handleCloseNavMenu = () => {
         return setAnchorElNav(null);
     };
-    
+
     return (
         <ThemeProvider theme={theme}>
-            <AppBar position="fixed">
+            <AppBar position="static">
                 <Container maxWidth="x1">
                         <Toolbar theme={theme} disableGutters>
                             <Typography 
