@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./ui/Header";
 //import Route from "./Link";
-import { BrowserRouter, Routes, Route, Switch, Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 // import Accessories from "./core-components/Accessories";
 // import Contact from "./core-components/Contact";
 // import Home from "./core-components/Home";
@@ -30,4 +30,4 @@ const App = () => {
     );
 }
 
-export default App;
+export default App2;
