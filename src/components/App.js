@@ -28,4 +28,8 @@ const App = () => {
     );
 }
 
+<<<<<<< HEAD
 export default App3;
+=======
+export default App2;
+>>>>>>> wip-navigation
