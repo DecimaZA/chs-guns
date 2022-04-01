@@ -32,7 +32,7 @@ export const faq = [
     },
 ]
 
-const FaQ = () => {
+const FAQ = () => {
     return (
         <div>
             <div>
@@ -47,4 +47,4 @@ const FaQ = () => {
     );
 };
 
-export default FaQ;
+export default FAQ;

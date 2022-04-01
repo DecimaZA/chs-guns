@@ -1,12 +1,14 @@
 import React from "react";
 import Header from "./ui/Header";
-import Route from "./Route";
-import Accessories from "./core-components/Accessories";
-import Contact from "./core-components/Contact";
-import Home from "./core-components/Home";
-import Products from "./core-components/Products";
-import Services from "./core-components/Services";
-import FaQ from "./core-components/FaQ";
+//import Route from "./Link";
+import { BrowserRouter, Routes, Route, Switch, Link, Outlet } from "react-router-dom";
+// import Accessories from "./core-components/Accessories";
+// import Contact from "./core-components/Contact";
+// import Home from "./core-components/Home";
+// import Products from "./core-components/Products";
+// import Services from "./core-components/Services";
+// import FaQ from "./core-components/FAQ";
+
 //MUI imports
 import Box from "@mui/material/Box";
 
@@ -20,26 +22,27 @@ const App = () => {
             }}
         >
             <div>
-                <Header />
-                <Route path="/">
-                    <Home />
-                </Route>
-                <Route path="/products">
-                    <Products />
-                </Route>
-                <Route path="/accessories">
-                    <Accessories />
-                </Route>
-                <Route path="/services">
-                    <Services />
-                </Route>
-                <Route path="/contact">
-                    <Contact />
-                </Route>
-                <Route path="/faq">
-                    <FaQ />
-                </Route>
+                <Header/>
+                    <Link to="/">
+                        Home
+                    </Link>
+                    <Link to="/products">
+                        Products
+                    </Link>
+                    <Link to="/accessories">
+                        Accessories
+                    </Link>
+                    <Link to="/services">
+                        Services
+                    </Link>
+                    <Link to="/faq">
+                        FAQ
+                    </Link>
+                    <Link to="/contact">
+                        Contact
+                    </Link>
             </div>
+            <Outlet />
         </Box>
     );
 }

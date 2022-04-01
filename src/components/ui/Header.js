@@ -6,11 +6,14 @@ import SearchBar from "./SearchBar";
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { ThemeProvider } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Toolbar, Typography, Button, ButtonGroup, IconButton, Menu, MenuItem, Box, Container } from "@mui/material";
+import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Box, Container } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {   
     const pages = ["Home", "Producs", "Accessories", "Services", "FAQ", "Contact us"];
     const [anchorElNav, setAnchorElNav] = useState(null);
+
+    // const history = useNavigate();
     
     const handleOpenNavMenu = (event) => {
         return setAnchorElNav(event.currentTarget);
@@ -21,7 +24,7 @@ const Header = () => {
     
     return (
         <ThemeProvider theme={theme}>
-            <AppBar position="fixed">
+            <AppBar position="static">
                 <Container maxWidth="x1">
                         <Toolbar theme={theme} disableGutters>
                             <Typography 
@@ -66,7 +69,7 @@ const Header = () => {
                                 >
                                     {pages.map((page) => (
                                         <MenuItem key={page}  onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center" fontSize="1rem" color="primary" >{page}</Typography>
+                                            <Typography textAlign="center" fontSize="1rem" color="primary">{page}</Typography>
                                         </MenuItem>
                                     ))}
                                     <SearchBar />
@@ -88,6 +91,7 @@ const Header = () => {
                                     key={page}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
+                                    
                                 >
                                     {page}
                                 </Button>
