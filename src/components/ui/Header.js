@@ -10,10 +10,8 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Box, C
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {   
-    const pages = ["Products", "Accessories", "Services", "FAQ", "Contact"];
+    const pages = ["Products", "Accessories", "Services", "faq", "Contact"];
     const [anchorElNav, setAnchorElNav] = useState(null);
-
-    // const history = useNavigate();
     
     const handleOpenNavMenu = (event) => {
         return setAnchorElNav(event.currentTarget);
@@ -34,7 +32,7 @@ const Header = () => {
                                 sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
                             >
                                 <Link href='/'>
-                                    <VerifiedUserIcon edge="start" style={{ fontSize: 50, margin: 3 }} />
+                                    <VerifiedUserIcon edge="start" style={{ color: '#ffffff', fontSize: 50, margin: 3 }} />
                                 </Link>
                             </Typography>
 
@@ -68,11 +66,11 @@ const Header = () => {
                                 >
                                     {pages.map((page) => (
                                         <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                            <Button sx={{ my: 2, color: 'black', display: 'block' }}>
-                                                <Typography textAlign="center" fontSize="1rem" color="primary">                                           
-                                                   <Link href={`/${page}`}>{page}</Link>                                    
-                                                </Typography>
-                                            </Button>
+                                                <Link href={`/${page}`}>
+                                                    <Typography component="span" textAlign="center" fontSize="1rem" color="black">                                           
+                                                        {page}                                 
+                                                    </Typography>
+                                                </Link>
                                         </MenuItem>
                                     ))}
                                     <SearchBar />
