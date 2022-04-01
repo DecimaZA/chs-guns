@@ -26,19 +26,19 @@ const App = () => {
                     <Link to="/">
                         Home
                     </Link>
-                    <Link to="/products">
+                    <Link to="/Products">
                         Products
                     </Link>
-                    <Link to="/accessories">
+                    <Link to="/Accessories">
                         Accessories
                     </Link>
-                    <Link to="/services">
+                    <Link to="/Services">
                         Services
                     </Link>
-                    <Link to="/faq">
+                    <Link to="/FAQ">
                         FAQ
                     </Link>
-                    <Link to="/contact">
+                    <Link to="/Contact">
                         Contact
                     </Link>
             </div>

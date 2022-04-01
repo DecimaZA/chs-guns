@@ -10,7 +10,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Box, C
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {   
-    const pages = ["Home", "Producs", "Accessories", "Services", "FAQ", "Contact us"];
+    const pages = ["Products", "Accessories", "Services", "FAQ", "Contact"];
     const [anchorElNav, setAnchorElNav] = useState(null);
 
     // const history = useNavigate();
@@ -41,7 +41,6 @@ const Header = () => {
                             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                                 <IconButton
                                     size="large"
-                                    aria-label="account of current user"
                                     aria-controls="menu-appbar"
                                     aria-haspopup="true"
                                     onClick={handleOpenNavMenu}
@@ -68,8 +67,12 @@ const Header = () => {
                                     }}
                                 >
                                     {pages.map((page) => (
-                                        <MenuItem key={page}  onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center" fontSize="1rem" color="primary">{page}</Typography>
+                                        <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                            <Button sx={{ my: 2, color: 'black', display: 'block' }}>
+                                                <Typography textAlign="center" fontSize="1rem" color="primary">                                           
+                                                   <Link href={`/${page}`}>{page}</Link>                                    
+                                                </Typography>
+                                            </Button>
                                         </MenuItem>
                                     ))}
                                     <SearchBar />
@@ -91,9 +94,10 @@ const Header = () => {
                                     key={page}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
-                                    
                                 >
-                                    {page}
+                                    <Link href={`/${page}`}>
+                                        {page}
+                                    </Link>
                                 </Button>
                                 ))}
                             <SearchBar />

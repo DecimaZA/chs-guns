@@ -9,11 +9,6 @@ import Accessories from "./components/core-components/Accessories";
 import FaQ from "./components/core-components/FAQ";
 import Contact from "./components/core-components/Contact";
 
-// ReactDOM.render(
-//     <App />, 
-//     document.querySelector('#root')
-// );
-
 const rootElement = document.getElementById("root");
 render(
     <BrowserRouter>
