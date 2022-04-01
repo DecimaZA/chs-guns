@@ -7,7 +7,6 @@ import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { ThemeProvider } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Box, Container } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 
 const Header = () => {   
     const pages = ["Products", "Accessories", "Services", "faq", "Contact"];
