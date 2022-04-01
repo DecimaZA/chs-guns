@@ -23,24 +23,7 @@ const App = () => {
         >
             <div>
                 <Header/>
-                    {/* <Link to="/">
-                        Home
-                    </Link>
-                    <Link to="/Products">
-                        Products
-                    </Link>
-                    <Link to="/Accessories">
-                        Accessories
-                    </Link>
-                    <Link to="/Services">
-                        Services
-                    </Link>
-                    <Link to="/FAQ">
-                        FAQ
-                    </Link>
-                    <Link to="/Contact">
-                        Contact
-                    </Link> */}
+                
             </div>
             <Outlet />
         </Box>
