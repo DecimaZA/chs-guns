@@ -8,7 +8,7 @@ export const faq = [
     },
     {
         question: "What is proficiency, competency, and where does my license fit in?",
-        answer: "Proficiency is the training you must undergo in terms of the Firearms Control Act 60 of 2000, which you then use to apply for competency with your local SAPS Designated Firearm Officer. Once your competency is approved, you can apply for a license for that firearm using your competency cerrtificate.",
+        answer: "Proficiency is the training you must undergo in terms of the Firearms Control Act 60 of 2000, which you then use to apply for competency with your local SAPS Designated Firearm Officer. Once your competency is approved, you can apply for a license for that firearm using your competency certificate.",
     },
     {
         question: "How long will it take for me to get a license?",

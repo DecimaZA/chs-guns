@@ -1,4 +1,3 @@
-import { ChargingStationRounded } from '@mui/icons-material';
 import { createTheme } from '@mui/material/styles';
 
 const chsBlack = "#000000";
@@ -38,8 +37,7 @@ const theme = createTheme({
     // button: {
     //     primary: {
     //         variant: "contained",
-    //         color: chsGrey
-
+    //         color: chsGray
     //     }
     // },
         breakpoints: {

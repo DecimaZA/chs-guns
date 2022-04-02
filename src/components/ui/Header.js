@@ -64,12 +64,12 @@ const Header = () => {
                                     }}
                                 >
                                     {pages.map((page) => (
-                                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                                <Link href={`/${page}`}>
-                                                    <Typography component="span" textAlign="center" fontSize="1rem" color="black">                                           
-                                                        {page}                                 
-                                                    </Typography>
-                                                </Link>
+                                        <MenuItem key={page} onClick={handleCloseNavMenu}>       
+                                            <Link href={`/${page}`}>
+                                                <Typography textAlign="center" fontSize="1rem" color="#000000">                                           
+                                                    {page}                                 
+                                                </Typography>    
+                                            </Link>    
                                         </MenuItem>
                                     ))}
                                     <SearchBar />
@@ -92,9 +92,11 @@ const Header = () => {
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
                                 >
-                                    <Link href={`/${page}`}>
+                                    <Link onClick={handleCloseNavMenu} href={`/${page}`}>
+                                        <Typography color="#ffffff" fontSize="1rem">
                                         {page}
-                                    </Link>
+                                        </Typography>
+                                    </Link>  
                                 </Button>
                                 ))}
                             <SearchBar />

@@ -1,6 +1,6 @@
 import React from "react";
+// MUI imports
 import Button from '@mui/material/Button';
-import { Typography } from "@mui/material";
 
 const Link = ({ href, children }) => {
     const onHeaderClick = (event) => {
@@ -14,14 +14,9 @@ const Link = ({ href, children }) => {
     return (
             <Button
                 onClick={onHeaderClick}
-                href={href} 
+                href={href}
             >
-                <Typography 
-                    color="#ffffff"
-                    fontSize="1rem" 
-                >
                     {children}
-                </Typography>
             </Button>
     )
 };
