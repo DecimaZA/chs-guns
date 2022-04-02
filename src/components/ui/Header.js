@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Link from "../Link";
 import theme from './Themes';
 import SearchBar from "./SearchBar";
+import chsLogo from './chsLogo.png';
+
 //MUI imports
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { ThemeProvider } from '@mui/material/styles';
@@ -31,7 +33,8 @@ const Header = () => {
                                 sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
                             >
                                 <Link href='/'>
-                                    <VerifiedUserIcon edge="start" style={{ color: '#ffffff', fontSize: 50, margin: 3 }} />
+                                    {/* <VerifiedUserIcon edge="start" style={{ color: '#ffffff', fontSize: 50, margin: 3 }} /> */}
+                                    <img src={chsLogo} alt="logo" flex="1" width="100" />
                                 </Link>
                             </Typography>
 
@@ -45,6 +48,9 @@ const Header = () => {
                                 >
                                     <MenuIcon />
                                 </IconButton>
+                                <Link href='/'>
+                                    <img src={chsLogo} alt="logo" flex="1" width="100" />
+                                </Link>
                                 <Menu
                                     id="menu-appbar"
                                     anchorEl={anchorElNav}
