@@ -6,7 +6,7 @@ import Home from "./components/core-components/Home";
 import Products from "./components/core-components/Products";
 import Services from "./components/core-components/Services";
 import Accessories from "./components/core-components/Accessories";
-import FaQ from "./components/core-components/FAQ";
+import FAQ from "./components/core-components/FAQ";
 import Contact from "./components/core-components/Contact";
 import Footer from "./components/ui/Footer";
 
@@ -19,7 +19,7 @@ render(
                 <Route path='/products' element={<Products />} />
                 <Route path='/accessories' element={<Accessories />} />
                 <Route path='/services' element={<Services />} />
-                <Route path='/FAQ' element={<FaQ />} />
+                <Route path='/FAQ' element={<FAQ />} />
                 <Route path='/contact' element={<Contact />} />
             </Route>
         </Routes>

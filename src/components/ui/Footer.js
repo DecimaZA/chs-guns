@@ -6,9 +6,13 @@ import theme from "./Themes";
 
 const Footer = () => {
     return(
-        <Grid>
-            
-        </Grid>
+        <footer>
+            <Grid container>
+                <Grid item>
+                    Home
+                </Grid>
+            </Grid>
+        </footer>
     );
 };
 
