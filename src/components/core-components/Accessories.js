@@ -1,8 +1,8 @@
 import React from "react";
-import Link from '../Link';
+// import Link from '../Link';
 //MUI imports
-import Grid from '@mui/material/Grid';
-import { Typography, Button, Box, Container } from "@mui/material";
+// import Grid from '@mui/material/Grid';
+// import { Typography, Button, Box, Container } from "@mui/material";
 
 
 const Accessories = () => {
