@@ -16,10 +16,13 @@ const SearchBar = () => {
             backgroundColor: alpha(theme.palette.common.chsLightGray, 0.25)
         },
         marginLeft: 0,
+        // height: '100%',
         width: '100%',
         [theme.breakpoints.up('sm')]: {
+            marginTop: theme.spacing(2.3),
             marginLeft: theme.spacing(1),
             width: 'auto',
+            height: '100%'
         },
     }));
     
@@ -36,7 +39,7 @@ const SearchBar = () => {
       const StyledInputBase = styled(InputBase)(({ theme }) => ({
         color: 'inherit',
         '& .MuiInputBase-input': {
-            padding: theme.spacing(1, 1, 1, 0),
+            padding: theme.spacing(1, 1, 1, 1),
             paddingLeft: `calc(1em + ${theme.spacing(4)})`,
             transition: theme.transitions.create('width'),
             width: '100%',

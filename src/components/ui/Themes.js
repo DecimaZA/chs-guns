@@ -48,6 +48,9 @@ const theme = createTheme({
             desktop: 1200,
             },
         },
+        // footer: {
+        //     background
+        // }
     },
 
 });

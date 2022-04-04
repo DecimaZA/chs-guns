@@ -8,20 +8,22 @@ import Services from "./components/core-components/Services";
 import Accessories from "./components/core-components/Accessories";
 import FaQ from "./components/core-components/FAQ";
 import Contact from "./components/core-components/Contact";
+import Footer from "./components/ui/Footer";
 
 const rootElement = document.getElementById("root");
 render(
     <BrowserRouter>
         <Routes>
-            <Route path='/' element={<App />}>
+            <Route element={<App />}>
                 <Route path='/' element={<Home />} />
-                <Route path='products' element={<Products />} />
+                <Route path='/products' element={<Products />} />
                 <Route path='/accessories' element={<Accessories />} />
                 <Route path='/services' element={<Services />} />
                 <Route path='/FAQ' element={<FaQ />} />
                 <Route path='/contact' element={<Contact />} />
             </Route>
         </Routes>
+        <Footer />
     </BrowserRouter>,
     rootElement
 );
