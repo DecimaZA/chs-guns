@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import { fontSize } from '@mui/system';
 
 const chsBlack = "#000000";
 const chsGray = "#757575";
@@ -35,6 +36,11 @@ const theme = createTheme({
             fontSize: "1rem"
         },
     },
+    button: {
+        primary: {
+            color: chsRed,
+        }
+    }
 
 });
 

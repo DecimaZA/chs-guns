@@ -1,21 +1,19 @@
 // import { useEffect, useState } from "react";
+// import { Link } from 'react-router-dom';
+// import { Outlet } from "react-router-dom";
 
-// const Route = ({path, children}) => {
-//     const [currentPath, setCurrentPath] = useState(window.location.pathname);
+// const Route = () => {
+//     const pages = ["Products", "Accessories", "Services", "faq", "Contact"];
 
-//     useEffect(() => {
-//         const onLocationChange = () => {
-//             setCurrentPath(window.location.pathname);
-//         }
+    
+
+//     return (
         
-//         window.addEventListener('popstate', onLocationChange);
-
-//         return () => {
-//             window.removeEventListener('popstate', onLocationChange);
-//         };
-//     }, []);
-
-//     return currentPath === path ? children : null;
+//         <div>
+//             {pages.map((page) => (
+//             <Link key={page} to={`/${page}`}>{page}</Link>
+//             ))}
+//         </div>
+//     );
 // };
-
 // export default Route;

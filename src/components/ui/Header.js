@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Link from "../Link";
+import { Outlet } from "react-router-dom";
+
 import theme from './Themes';
 import SearchBar from "./SearchBar";
 import chsLogo from './chsLogo.png';
@@ -97,12 +99,13 @@ const Header = () => {
                                     key={page}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
+                                    variant="outlined"
                                 >
-                                    <Link onClick={handleCloseNavMenu} href={`/${page}`}>
-                                        <Typography color="#ffffff" fontSize="1rem">
-                                        {page}
-                                        </Typography>
-                                    </Link>  
+                                    <Typography theme={theme} variant="primary" >
+                                        <Link onClick={handleCloseNavMenu} href={`/${page}`}>                                           
+                                            {page}                                         
+                                        </Link>
+                                    </Typography>  
                                 </Button>
                                 ))}
                             <SearchBar />
