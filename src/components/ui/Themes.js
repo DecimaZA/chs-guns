@@ -21,36 +21,19 @@ const theme = createTheme({
             main: chsGray
         }
     },
-    typography: {
+    typography: { 
         primary: {
             fontSize: "1rem",
             color: chsWhite
         },
         secondary: {
             fontSize: "1rem",
-            color: chsWhite
+            color: chsBlack
         },
         tab: {
             textTransform: "none",
             fontSize: "1rem"
         },
-    // button: {
-    //     primary: {
-    //         variant: "contained",
-    //         color: chsGray
-    //     }
-    // },
-        breakpoints: {
-            values: {
-            mobile: 0,
-            tablet: 640,
-            laptop: 1024,
-            desktop: 1200,
-            },
-        },
-        // footer: {
-        //     background
-        // }
     },
 
 });
