@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route, Outlet, Link, NavLink } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 import theme from './Themes';
 import SearchBar from "./SearchBar";
-import chsLogo from './chsLogo.png';
 
 //MUI imports
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import { ThemeProvider } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Box, Container } from "@mui/material";
+import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem, Box, Container } from "@mui/material";
 
 const Header = () => {   
     const pages = ["Home", "Products", "Accessories", "Services", "FAQ", "Contact"];
