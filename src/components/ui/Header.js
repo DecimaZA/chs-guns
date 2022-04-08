@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Link from "../Link";
-import { Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, Link, NavLink } from "react-router-dom";
 
 import theme from './Themes';
 import SearchBar from "./SearchBar";
@@ -13,7 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Toolbar, Typography, Button, IconButton, Menu, MenuItem, Box, Container } from "@mui/material";
 
 const Header = () => {   
-    const pages = ["Products", "Accessories", "Services", "faq", "Contact"];
+    const pages = ["Home", "Products", "Accessories", "Services", "FAQ", "Contact"];
     const [anchorElNav, setAnchorElNav] = useState(null);
     
     const handleOpenNavMenu = (event) => {
@@ -33,14 +32,12 @@ const Header = () => {
                                 noWrap
                                 component="div"
                                 sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
-                            >
-                                <Link href='/'>
-                                    {/* <VerifiedUserIcon edge="start" style={{ color: '#ffffff', fontSize: 50, margin: 3 }} /> */}
-                                    <img src={chsLogo} alt="logo" flex="1" width="100" />
-                                </Link>
+                            >                                
+                                <VerifiedUserIcon edge="start" style={{ color: '#ffffff', fontSize: 50, margin: 3 }} />
+                                {/* <img src={chsLogo} alt="logo" flex="1" width="100" /> */}                                
                             </Typography>
 
-                            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                            <Box sx={{ color: "white", flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                                 <IconButton
                                     size="large"
                                     aria-controls="menu-appbar"
@@ -50,9 +47,9 @@ const Header = () => {
                                 >
                                     <MenuIcon />
                                 </IconButton>
-                                <Link href='/'>
-                                    <img src={chsLogo} alt="logo" flex="1" width="100" />
-                                </Link>
+                                {/* <Link href='/'> */}
+                                    {/* <img src={chsLogo} alt="logo" flex="1" width="100" /> */}
+                                {/* </Link> */}
                                 <Menu
                                     id="menu-appbar"
                                     anchorEl={anchorElNav}
@@ -73,11 +70,19 @@ const Header = () => {
                                 >
                                     {pages.map((page) => (
                                         <MenuItem key={page} onClick={handleCloseNavMenu}>       
-                                            <Link href={`/${page}`}>
-                                                <Typography textAlign="center" fontSize="1rem" color="#000000">                                           
-                                                    {page}                                 
-                                                </Typography>    
-                                            </Link>    
+                                            <NavLink
+                                                style={({ isActive }) => {
+                                                return {
+                                                    display: "block",
+                                                    margin: "1rem 0",
+                                                    color: isActive ? "" : "black",
+                                                };
+                                            }}
+                                                to={`/${page}`}
+                                                key={page}
+                                            >
+                                                {page}
+                                            </NavLink>    
                                         </MenuItem>
                                     ))}
                                     <SearchBar />
@@ -89,26 +94,32 @@ const Header = () => {
                                 component="div"
                                 sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                             >
-                                <Link href='/'>
+                                {/* <Link href='/'> */}
                                     <VerifiedUserIcon edge="start" style={{ fontSize: 50, margin: 3 }} />
-                                </Link>
+                                {/* </Link> */}
                             </Typography>
-                            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                                {pages.map((page) => (
-                                <Button
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: 'white', display: 'block' }}
-                                    variant="outlined"
+                            <Box sx={{ margin: "1rem", flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                                <Typography 
+                                    variant="h4"
+                                    sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
                                 >
-                                    <Typography theme={theme} variant="primary" >
-                                        <Link onClick={handleCloseNavMenu} href={`/${page}`}>                                           
-                                            {page}                                         
-                                        </Link>
-                                    </Typography>  
-                                </Button>
-                                ))}
-                            <SearchBar />
+                                    {pages.map((page) => (
+                                        <NavLink
+                                            style={({ isActive }) => {
+                                                return {
+                                                    display: "inline",
+                                                    margin: "1rem 1rem",
+                                                    color: isActive ? "white" : "",
+                                                };
+                                            }}
+                                            to={`/${page}`}
+                                            key={page}
+                                        >
+                                            {page}
+                                        </NavLink>
+                                    ))}
+                                </Typography>
+                                <SearchBar />
                             </Box>
                         </Toolbar>
                     </Container>

@@ -9,8 +9,7 @@ import Box from "@mui/material/Box";
 
 const App = () => {
     return (       
-        <Box >
-            <Header/>
+        <Box>
             <Outlet />
             <Footer />
         </Box>
