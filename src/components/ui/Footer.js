@@ -19,6 +19,24 @@ const Footer = () => {
                         <Grid item>
                             <Grid container direction="column">
                                 <Grid item>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item>
+                            <Grid container direction="column">
+                                <Grid item>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item>
+                            <Grid container direction="column">
+                                <Grid item>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        <Grid item>
+                            <Grid container direction="column">
+                                <Grid item>
                                     <Link href='/'>
                                         <img src={chsLogo} alt="logo" flex="1" width="100" />
                                     </Link>

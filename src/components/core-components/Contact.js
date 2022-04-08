@@ -55,7 +55,7 @@ const Contact = () => {
                                             Saturday: Closed
                                             Sunday: Closed
                                         </Typography>
-                                        <Typography variant="h2" marginLeft={10}>
+                                        <Typography variant="h3" marginLeft={10}>
                                             Call or drop us an email for any questions or comments you may have!
                                         </Typography>
                                         <Typography align="left" variant="body1" marginLeft={4} marginTop={1} marginRight={130}>
