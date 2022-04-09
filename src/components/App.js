@@ -10,7 +10,7 @@ const App = () => {
         <Box>
             <Header />            
             <Outlet />
-            <Footer />
+            
         </Box>
     );
 }

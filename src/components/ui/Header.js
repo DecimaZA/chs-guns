@@ -10,7 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem, Box, Container } from "@mui/material";
 
 const Header = () => {   
-    const pages = ["Home", "Products", "Accessories", "Services", "FAQ", "Contact"];
+    const pages = ["Home", "Products", "Accessories", "Services", "FAQ", "Contact us"];
     const [anchorElNav, setAnchorElNav] = useState(null);
     
     const handleOpenNavMenu = (event) => {
@@ -106,7 +106,7 @@ const Header = () => {
                                             style={({ isActive }) => {
                                                 return {
                                                     display: "inline",
-                                                    margin: "1rem 1rem",
+                                                    margin: "1rem",
                                                     color: isActive ? "white" : "",
                                                 };
                                             }}

@@ -8,6 +8,7 @@ import Services from "./components/core-components/Services";
 import Accessories from "./components/core-components/Accessories";
 import FAQ from "./components/core-components/FAQ";
 import Contact from "./components/core-components/Contact";
+import Footer from "./components/ui/Footer";
 
 const rootElement = document.getElementById("root");
 render(
@@ -22,6 +23,7 @@ render(
                 <Route path='/contact' element={<Contact />} />
             </Route>
         </Routes>
+        <Footer />
     </BrowserRouter>,
     rootElement
 );
