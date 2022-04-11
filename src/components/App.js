@@ -7,10 +7,10 @@ import Box from "@mui/material/Box";
 
 const App = () => {
     return (       
-        <Box>
+        <Box backgroundColor="#cccccc" sx={{width: "100%", height: "100%"}} position="relative">
             <Header />            
             <Outlet />
-            
+            <Footer />
         </Box>
     );
 }

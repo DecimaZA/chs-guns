@@ -23,7 +23,6 @@ render(
                 <Route path='/contact' element={<Contact />} />
             </Route>
         </Routes>
-        <Footer />
     </BrowserRouter>,
     rootElement
 );
