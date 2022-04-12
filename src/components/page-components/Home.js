@@ -2,7 +2,7 @@ import React from "react";
 import Logos from '../images/Logos';
 //MUI imports
 import { Typography } from "@mui/material";
-import { Box, Container, Grid } from "@mui/material/";
+import { Box, Grid } from "@mui/material/";
 
 const Home = () => {
     return (

@@ -6,7 +6,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import { Box, Typography, Grid } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const FaqAccordion = ({faq}) => {
+const FaqAccordion = ({ faq }) => {
   return (
     
         <Grid container direction='column' columnSpacing={{ xs: 1, sm: 2, md: 3 }}>

@@ -1,5 +1,5 @@
 import React from "react";
-import FaqAccordion from "./Accordion";
+import FaqAccordion from "../ui/FaqAccordion";
 //MUI imports
 import { Box, Typography, Grid } from '@mui/material';
 

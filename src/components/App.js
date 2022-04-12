@@ -2,10 +2,8 @@ import React from "react";
 import Header from "./ui/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "./ui/Footer";
-import brandCollage from "./images/logosFolder/brandCollage.png";
-import glockLogo from './images/logosFolder/glockLogo.png';
 //MUI imports
-import {Box, Grid} from "@mui/material/";
+import {Box} from "@mui/material/";
 
 const App = () => {
     return (       

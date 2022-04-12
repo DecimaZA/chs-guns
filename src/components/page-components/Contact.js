@@ -2,25 +2,25 @@ import React from "react";
 import MapsContainer from '../../apis/GoogleMaps';
 import theme from "../ui/Themes";
 //MUI imports
-import {Box, Container} from '@mui/material/';
+import {Box} from '@mui/material/';
 import { ThemeProvider, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
-import { styled } from '@mui/material/styles';
-import Paper from '@mui/material/Paper';
+// import { styled } from '@mui/material/styles';
+// import Paper from '@mui/material/Paper';
 
-const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  }));
+// const Item = styled(Paper)(({ theme }) => ({
+//     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+//     ...theme.typography.body2,
+//     padding: theme.spacing(1),
+//     textAlign: 'center',
+//     color: theme.palette.text.secondary,
+//   }));
 
 const Contact = () => {
     return (
         <ThemeProvider theme={theme}>
-            <Box sx={{ width: '100%' }}>
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent="center" margin="40px">
+            <Box sx={{ width: '100%' }} margin='5rem'>
+                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent="center" >
                     <Grid item xs={12} textAlign="center">
                         <Typography variant="h1" align="center">
                             About our exact location...
