@@ -1,37 +1,44 @@
-import React, { useState } from "react";
-// import { faq } from "./FaQ";
+import React from "react";
+//MUI imports
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import { Box, Typography, Grid } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const Accordion = ({ faq }) => {
-    const [activeQuestion, setActiveQuestion] = useState(null);
+const FaqAccordion = ({faq}) => {
+  return (
+    
+        <Grid container direction='column' columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Grid item xs={6} textAlign="center">
+                
+                <Box margin='5rem'>
+                    {faq.map(accordion => {
+                    const {question, answer} = accordion;
+                        return(
+                            <Accordion key={question}>
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography variant='h5' align='left'>
+                                        {question}
+                                    </Typography>
+                                </AccordionSummary>
+                                <AccordionDetails>
+                                    <Typography variant='h6' align='left'>
+                                        {answer}
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        );
+                    })};
+                </Box>
+            </Grid>
+        </Grid>
+    
+  );
+}
 
-    const onQuestionClick = (question) => {
-        return setActiveQuestion(question);
-    };
-
-    const RenderedFaq = faq.map((faq, question) => {
-        const active = question === activeQuestion ? 'active' : '';
-
-        return (
-            <React.Fragment key={faq.question}>
-                <div 
-                    className={`title ${active}`}
-                    onClick={() => onQuestionClick(question)}  
-                >
-                    <i className="dropdown icon"></i>
-                    {faq.question}
-                </div>
-                <div className={`content ${active}`}>
-                    <p>{faq.answer}</p>
-                </div>
-            </React.Fragment>
-        );
-    });
-
-    return (
-        <div className="ui styled fluid accordion">
-            {RenderedFaq}
-        </div>
-    );
-};
-
-export default Accordion;
+export default FaqAccordion;

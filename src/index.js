@@ -9,6 +9,7 @@ import Accessories from "./components/core-components/Accessories";
 import FAQ from "./components/core-components/FAQ";
 import Contact from "./components/core-components/Contact";
 import Footer from "./components/ui/Footer";
+import Accordion from './components/core-components/Accordion';
 
 const rootElement = document.getElementById("root");
 render(
