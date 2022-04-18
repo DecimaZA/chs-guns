@@ -8,7 +8,7 @@ const today = new Date();
 const Footer = () => {
     return(
         <Box sx={{ backgroundColor: "black", width: '100%' }}>
-            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
+            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} margin="1rem">
                 <Grid item xs={1} md={3}>
                     
                 </Grid>

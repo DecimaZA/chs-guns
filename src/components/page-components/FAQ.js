@@ -1,7 +1,8 @@
 import React from "react";
 import FaqAccordion from "../ui/FaqAccordion";
+import theme from "../ui/Themes";
 //MUI imports
-import { Box, Typography, Grid } from '@mui/material';
+import { Box, Typography, Grid, ThemeProvider } from '@mui/material';
 
 export const faq = [
     {
@@ -44,29 +45,31 @@ export const faq = [
 
 const FAQ = () => {
     return (
-        <Box margin='3rem'>
-            <Grid container >
-                <Grid item textAlign="center" xs={8}>
-                    <Typography variant="h1">
-                        Frequently Asked Questions
-                    </Typography>
-                </Grid>
-                <Grid item xs={6}>
-
-                </Grid>
+        <ThemeProvider theme={theme}>
+            <Box margin='3rem'>
                 <Grid container >
+                    <Grid item textAlign="center" xs={8}>
+                        <Typography variant="h1">
+                            Frequently Asked Questions
+                        </Typography>
+                    </Grid>
                     <Grid item xs={6}>
 
                     </Grid>
-                    <Grid item textAlign='center' xs={6}>
-                        <Typography variant="h3">
-                            ...and the answers we frequently give
-                        </Typography>
+                    <Grid container >
+                        <Grid item xs={6}>
+
+                        </Grid>
+                        <Grid item textAlign='center' xs={6}>
+                            <Typography variant="h3">
+                                ...and the answers we frequently give
+                            </Typography>
+                        </Grid>
                     </Grid>
-                </Grid>
-            </Grid> 
-            <FaqAccordion faq={faq} />
-        </Box>
+                </Grid> 
+                <FaqAccordion faq={faq} />
+            </Box>
+        </ThemeProvider>
     );
 };
 

@@ -3,8 +3,9 @@ import MapsContainer from '../../apis/GoogleMaps';
 import theme from "../ui/Themes";
 //MUI imports
 import {Box} from '@mui/material/';
-import { ThemeProvider, Typography } from "@mui/material";
+import { ThemeProvider, Typography, ListItem, ListItemText } from "@mui/material";
 import { Grid } from "@mui/material";
+
 // import { styled } from '@mui/material/styles';
 // import Paper from '@mui/material/Paper';
 
@@ -18,9 +19,9 @@ import { Grid } from "@mui/material";
 
 const Contact = () => {
     return (
-        <ThemeProvider theme={theme}>
-            <Box sx={{ width: '100%' }} margin='5rem'>
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} justifyContent="center" >
+        <ThemeProvider theme={theme} >
+            <Box sx={{ margin: "5rem" }}>
+                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     <Grid item xs={12} textAlign="center">
                         <Typography variant="h1" align="center">
                             About our exact location...
@@ -30,8 +31,6 @@ const Contact = () => {
                         <Typography variant="h2" align="center">
                             Street access and parking
                         </Typography>
-                    </Grid>
-                    <Grid item xs={6} textAlign="center">
                         <Typography align="center" variant="body1">
                             Basement Level, The Beehive, 159 Main Road, Somerset West, 7130, Western Cape, South Africa, Earth, Milky Way Galaxy, the Universe
                             Our store location is tucked away behind The Beehive building, with vehicle access from both Main Road and St James Street (even
@@ -49,8 +48,6 @@ const Contact = () => {
                         <Typography variant="h2" align="center">
                             The store entrance...
                         </Typography>
-                    </Grid>
-                    <Grid item  xs={6} textAlign="center">
                         <Typography align="center" variant="body1">
                             Our store entrance is to the right of the steel fire escape, down some steps. You will see the thick steel barred gate that
                             gun shop customers are all to familiar with. Beyond that gate and immediately to the left is another smaller gate that directly
@@ -59,34 +56,52 @@ const Contact = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={6} textAlign="center">
+                        
+                    </Grid>
+                    <Grid item xs={6} textAlign="center">
+                        
+                    </Grid>
+                    <Grid item  xs={6} textAlign="center">
                         <Typography variant="h2">
                             Our operating hours:
                         </Typography>
-                    </Grid>
-                    <Grid item xs={6}>
                         <Typography align="center" variant="body1">
-                            We all have to sleep and do admin sometime! Please note out operating hours:
+                            We all have to sleep and do admin sometime! Please note our operating hours:
                         </Typography>
                         <Typography align="center" variant="body1">
-                            Monday: Closed
-                            Tuesday: 09:00 - 17:00
-                            Wednesday: 09:00 - 17:00
-                            Thuesday: 09:00 - 17:00
-                            Friday: 09:00 - 17:00
-                            Saturday: Closed
-                            Sunday: Closed
+                            <ListItem>
+                                <ListItemText>Monday: Closed</ListItemText>
+                                <ListItemText>Tuesday: 09:00 - 17:00</ListItemText>
+                                <ListItemText>Wednesday: 09:00 - 17:00</ListItemText>
+                                <ListItemText>Thuesday: 09:00 - 17:00</ListItemText>
+                                <ListItemText>Friday: 09:00 - 17:00</ListItemText>
+                                <ListItemText>Saturday: Closed</ListItemText>
+                                <ListItemText>Sunday: Closed</ListItemText>
+                            </ListItem>
                         </Typography>
                     </Grid>
-                    <Grid item xs={6}>
-                        <Typography align="center" variant="h5">
+                    <Grid item xs={6} textAlign="center">
+                        <Typography align="center" variant="h2">
                             Call or drop us an email for any questions or comments you may have!
                         </Typography>
+                        <Typography align="center" variant="body1">
+                            <ListItemText>
+                                Store contact number: 083 252 5097
+                            </ListItemText>
+                            <ListItemText>
+                                Store email: aziza@chsguns.co.za
+                            </ListItemText>
+                        </Typography>
                     </Grid>
                     <Grid item xs={6}>
-                        <Typography align="center" variant="body1">
-                            Store contact number: 083 252 5097
-                            Store email: aziza@chsguns.co.za
-                        </Typography>
+                        
+                    </Grid>
+                    <Grid container direction="row" rowSpacing={150}>
+                        <Grid item xs={6}>
+                            
+                            <MapsContainer />    
+
+                        </Grid>
                     </Grid>
                 </Grid>
             </Box>
