@@ -3,7 +3,7 @@ import MapsContainer from '../../apis/GoogleMaps';
 import theme from "../ui/Themes";
 //MUI imports
 import {Box} from '@mui/material/';
-import { ThemeProvider, Typography, ListItem, ListItemText } from "@mui/material";
+import { ThemeProvider, Typography, List, ListItem, ListItemText } from "@mui/material";
 import { Grid } from "@mui/material";
 
 // import { styled } from '@mui/material/styles';
@@ -68,46 +68,58 @@ const Contact = () => {
                         <Typography align="center" variant="body1">
                             We all have to sleep and do admin sometime! Please note our operating hours:
                         </Typography>
-                        <Typography align="center" variant="body1">
-                            <ListItem>
-                                <ListItemText>Monday: Closed</ListItemText>
-                                <ListItemText>Tuesday: 09:00 - 17:00</ListItemText>
-                                <ListItemText>Wednesday: 09:00 - 17:00</ListItemText>
-                                <ListItemText>Thuesday: 09:00 - 17:00</ListItemText>
-                                <ListItemText>Friday: 09:00 - 17:00</ListItemText>
-                                <ListItemText>Saturday: Closed</ListItemText>
-                                <ListItemText>Sunday: Closed</ListItemText>
-                            </ListItem>
-                        </Typography>
+                        <List>
+                            <Typography align="center" variant="body1">
+                                
+                                
+                                    Monday: Closed
+                             
+                                
+                                    Tuesday: 09:00 - 17:00
+                                
+                                
+                                    Wednesday: 09:00 - 17:00
+                                
+                                
+                                    Thuesday: 09:00 - 17:00
+                                
+                                
+                                    Friday: 09:00 - 17:00
+                                
+                                
+                                    Saturday: Closed
+                                
+                                
+                                    Sunday: Closed
+                                
+                                      
+                            </Typography>
+                        </List>
                     </Grid>
                     <Grid item xs={6} textAlign="center">
                         <Typography align="center" variant="h2">
-                            Call or drop us an email for any questions or comments you may have!
+                            Get in touch!
                         </Typography>
                         <Typography align="center" variant="body1">
-                            <ListItemText>
+                            Call or drop us an email for any questions or comments you may have!
                                 Store contact number: 083 252 5097
-                            </ListItemText>
-                            <ListItemText>
+                            
+                            
                                 Store email: aziza@chsguns.co.za
-                            </ListItemText>
+                            
                         </Typography>
                     </Grid>
-                    {/* <Grid item xs={6}>
-                        
-                    </Grid> */}
                 </Grid>
-                            <div style={{
-                                height: 600,
-                                width: "100%",
-                                display: "flex",
-                                justifyContent: 'center'
-                            }}>
-                            <MapsContainer />    
-                            </div>
+                    <div style={{
+                        height: 600,
+                        width: "100%",
+                        display: "flex",
+                        justifyContent: 'center'
+                        }}
+                    >
+                        <MapsContainer />    
+                    </div>
             </Box>
-
-
         </ThemeProvider>
     );
 };
