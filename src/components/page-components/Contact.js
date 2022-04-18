@@ -20,7 +20,7 @@ import { Grid } from "@mui/material";
 const Contact = () => {
     return (
         <ThemeProvider theme={theme} >
-            <Box sx={{ margin: "5rem" }}>
+            <Box >
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     <Grid item xs={12} textAlign="center">
                         <Typography variant="h1" align="center">
@@ -93,17 +93,18 @@ const Contact = () => {
                             </ListItemText>
                         </Typography>
                     </Grid>
-                    <Grid item xs={6}>
+                    {/* <Grid item xs={6}>
                         
-                    </Grid>
-                    <Grid container direction="row" rowSpacing={150}>
-                        <Grid item xs={6}>
-                            
-                            <MapsContainer />    
-
-                        </Grid>
-                    </Grid>
+                    </Grid> */}
                 </Grid>
+                            <div style={{
+                                height: 600,
+                                width: "100%",
+                                display: "flex",
+                                justifyContent: 'center'
+                            }}>
+                            <MapsContainer />    
+                            </div>
             </Box>
 
 
