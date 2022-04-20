@@ -3,7 +3,7 @@ import MapsContainer from '../../apis/GoogleMaps';
 import theme from "../ui/Themes";
 //MUI imports
 import {Box} from '@mui/material/';
-import { ThemeProvider, Typography, List, ListItem, ListItemText } from "@mui/material";
+import { ThemeProvider, Typography } from "@mui/material";
 import { Grid } from "@mui/material";
 
 // import { styled } from '@mui/material/styles';
@@ -20,8 +20,8 @@ import { Grid } from "@mui/material";
 const Contact = () => {
     return (
         <ThemeProvider theme={theme} >
-            <Box >
-                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            {/* <Box> */}
+                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 1, md: 4 }} columns={{ xs: 6, md: 12 }} padding="20px">
                     <Grid item xs={12} textAlign="center">
                         <Typography variant="h1" align="center">
                             About our exact location...
@@ -55,71 +55,75 @@ const Contact = () => {
                             encounter a wild Gideon lurking and waiting to help you like the good CHS elf he is.
                         </Typography>
                     </Grid>
+                    <Grid item xs={6} />
+                    <Grid item xs={6} />
                     <Grid item xs={6} textAlign="center">
-                        
-                    </Grid>
-                    <Grid item xs={6} textAlign="center">
-                        
-                    </Grid>
-                    <Grid item  xs={6} textAlign="center">
-                        <Typography variant="h2">
-                            Our operating hours:
-                        </Typography>
-                        <Typography align="center" variant="body1">
-                            We all have to sleep and do admin sometime! Please note our operating hours:
-                        </Typography>
-                        <List>
-                            <Typography align="center" variant="body1">
-                                
-                                
+                        <Grid container direction="column">
+                            <Grid item textAlign="center">
+                                <Typography variant="h2">
+                                    Our operating hours:
+                                </Typography>
+                            </Grid>
+                            <Grid item>
+                                <Typography align="center" variant="body1">
+                                    We all have to sleep and do admin sometime! Please note our operating hours:
+                                </Typography>
+                            </Grid>
+                            <Grid>
+                                <Typography align="center" variant="body1">
                                     Monday: Closed
-                             
-                                
+                                </Typography>                                             
+                                <Typography align="center" variant="body1">
                                     Tuesday: 09:00 - 17:00
-                                
-                                
+                                </Typography>
+                                <Typography align="center" variant="body1">
                                     Wednesday: 09:00 - 17:00
-                                
-                                
+                                </Typography>
+                                <Typography align="center" variant="body1">
                                     Thuesday: 09:00 - 17:00
-                                
-                                
+                                </Typography>
+                                <Typography align="center" variant="body1">
                                     Friday: 09:00 - 17:00
-                                
-                                
+                                </Typography>
+                                <Typography align="center" variant="body1">
                                     Saturday: Closed
-                                
-                                
+                                </Typography>  
+                                <Typography align="center" variant="body1">
                                     Sunday: Closed
-                                
-                                      
-                            </Typography>
-                        </List>
-                    </Grid>
+                                </Typography>
+                            </Grid>
+                            </Grid>
+                        </Grid>
                     <Grid item xs={6} textAlign="center">
                         <Typography align="center" variant="h2">
                             Get in touch!
                         </Typography>
                         <Typography align="center" variant="body1">
                             Call or drop us an email for any questions or comments you may have!
-                                Store contact number: 083 252 5097
-                            
-                            
-                                Store email: aziza@chsguns.co.za
-                            
+                        </Typography>
+                        <Typography align="center" variant="body1">
+                            Store contact number: 083 252 5097
+                        </Typography>
+                        <Typography align="center" variant="body1">
+                            Store email: aziza@chsguns.co.za
                         </Typography>
                     </Grid>
                 </Grid>
-                    <div style={{
-                        height: 600,
-                        width: "100%",
-                        display: "flex",
-                        justifyContent: 'center'
-                        }}
-                    >
-                        <MapsContainer />    
-                    </div>
-            </Box>
+                <Grid container direction="column" columns={{ xs: 6, md: 12 }}>
+                    <Grid item xs={6} md={12}>
+                        <div style={{
+                            height: 600,
+                            width: "100%",
+                            display: "flex",
+                            flexFlow: "row nowrap",
+                            justifyContent: 'center',
+                            }}
+                        >
+                            <MapsContainer />    
+                        </div>
+                    </Grid>
+                </Grid>
+            {/* </Box> */}
         </ThemeProvider>
     );
 };
