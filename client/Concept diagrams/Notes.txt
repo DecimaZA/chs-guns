@@ -1,0 +1,2 @@
+1. Take Header component to 100% completion by making React-Router the exclusive navigation. Check current configuration.
+2. 
