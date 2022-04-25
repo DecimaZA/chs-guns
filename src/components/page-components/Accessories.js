@@ -4,7 +4,6 @@ import React from "react";
 // import Grid from '@mui/material/Grid';
 // import { Typography, Button, Box, Container } from "@mui/material";
 
-
 const Accessories = () => {
     return (        
         <div style={{display: 'grid',  justifyContent:'center', alignItems:'center', height: '50vh', margin: '200px', padding: '50px'}}>

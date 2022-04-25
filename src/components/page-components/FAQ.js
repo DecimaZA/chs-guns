@@ -15,7 +15,7 @@ export const faq = [
     },
     {
         question: "How long will it take for me to get a license?",
-        answer: "Proficiency usually takes apprximately two weeks. The SAPS is court ordered to take no more than four months for competency, and the SAPS have an internal policy of trying to finalise a license application within 90 working days.",
+        answer: "Proficiency usually takes approximately two weeks. The SAPS is court ordered to take no more than four months for competency, and the SAPS have an internal policy of trying to finalise a license application within 90 working days.",
     },
     {
         question: "Can I make my license application go faster?",
@@ -31,7 +31,7 @@ export const faq = [
     },
     {
         question: "If my license is refused, what happens to my firearm?",
-        answer: "You have a few choices. 1: If your motiation was good, you can appeal the initial refusal. If the appeal was refused, you can apply again, but get a professional to do your motivation (we highly reccommend Motivus). 2: CHS will buy the firearm back from you for 75% of what you paid. 3: You can sell the firearm privately, but you will be liable for storage costs in this time it takes, at which point your buyer will take over storage costs until their license is approved.",
+        answer: "You have a few choices. 1: If your motiation was good, you can appeal the initial refusal. If the appeal was refused, you can apply again, but get a professional to do your motivation (we highly recommend Motivus). 2: CHS will buy the firearm back from you for 75% of what you paid. 3: You can sell the firearm privately, but you will be liable for storage costs in this time it takes, at which point your buyer will take over storage costs until their license is approved.",
     },
     {
         question: "What guns can I get, and can I buy a machine gun?",
