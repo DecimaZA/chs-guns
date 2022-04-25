@@ -10,7 +10,7 @@
 
 #api keys
 .env
-GoogleMaps.js
+apis
 
 # production
 /build
